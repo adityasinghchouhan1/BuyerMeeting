@@ -15,6 +15,7 @@ import ActionItemsPage from '../UI/ActionItemsPage'
 
 const BuyerMeetingPage = () => {
   const [open, setOpen] = useState(false)
+  const [hoveredMeetingId, setHoveredMeetingId] = useState(null)
 
   const meetingData = [
     {
@@ -489,9 +490,21 @@ const BuyerMeetingPage = () => {
                     <td className="px-4 py-2 text-xs text-gray-900">
                       {meeting.date}
                     </td>
-                    <td className="px-4 py-2">
+                    <td
+                      className="px-4 py-2 relative"
+                      onMouseEnter={() => setHoveredMeetingId(meeting.id)}
+                      onMouseLeave={() => setHoveredMeetingId(null)}
+                    >
                       {getStatusBadge(meeting.status)}
+
+                      {/* Hover Popup */}
+                      {hoveredMeetingId === meeting.id && (
+                        <div className="absolute top-full left-0 mt-2 z-50 sm:w-[790px]">
+                          <ActionItemsPage />
+                        </div>
+                      )}
                     </td>
+
                     <td className="px-4 py-2">{getTypeBadge(meeting.type)}</td>
                     <td className="px-4 py-2 text-xs text-gray-900 font-medium">
                       {meeting.buyerName}
