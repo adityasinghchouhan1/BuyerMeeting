@@ -552,7 +552,7 @@ const BuyerMeetingPage = () => {
                       </div>
                     </td>
                     {/* ✅ Sticky Action Column */}
-                    <td className="px-2 py-4 sticky right-0 bg-gray-50 shadow-md relative z-[9999]">
+                    <td className="px-2 py-4 sticky right-0 bg-gray-50 shadow-md relative z-[8888]">
                       <div className="relative inline-block group z-50">
                         {/* Action Button */}
                         <button className="p-2 hover:bg-gray-100 rounded-full">

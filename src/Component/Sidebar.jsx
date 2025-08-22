@@ -256,7 +256,7 @@ const SidebarLayout = ({ children }) => {
 
                 {/* Popup Profile Menu */}
                 {showProfileMenu && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-50">
+                  <div className="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-[9999]">
                     <ProfileMenu />
                   </div>
                 )}
