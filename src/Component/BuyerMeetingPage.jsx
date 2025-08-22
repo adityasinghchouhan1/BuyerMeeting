@@ -139,6 +139,7 @@ const BuyerMeetingPage = () => {
   ]
 
   const [searchTerm, setSearchTerm] = useState('')
+  //
   const [buyerFilter, setBuyerFilter] = useState('')
   const [brandFilter, setBrandFilter] = useState('')
   const [deptFilter, setDeptFilter] = useState('')
