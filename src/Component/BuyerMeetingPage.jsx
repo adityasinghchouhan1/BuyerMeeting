@@ -11,6 +11,7 @@ import ActionMenu from '../UI/ActionMenu'
 import ParticipantsMenu from '../UI/ParticipantsMenu'
 import { ChevronUp, ChevronDown } from 'lucide-react'
 import { ArrowUp, ArrowDown } from 'lucide-react'
+import ActionItemsPage from '../UI/ActionItemsPage'
 
 const BuyerMeetingPage = () => {
   const [open, setOpen] = useState(false)
@@ -514,7 +515,8 @@ const BuyerMeetingPage = () => {
                         onMouseLeave={() => setOpen(false)}
                       >
                         {/* Participant small snippet */}
-                        <div className="flex items-center cursor-pointer">
+                        {/* Participant Section */}
+                        <div className="flex items-center cursor-pointer relative z-10">
                           <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-xs text-white font-bold mr-2">
                             M
                           </div>
@@ -537,7 +539,7 @@ const BuyerMeetingPage = () => {
                       </div>
                     </td>
                     {/* ✅ Sticky Action Column */}
-                    <td className="px-2 py-4 sticky right-0 bg-gray-50 shadow-md">
+                    <td className="px-2 py-4 sticky right-0 bg-gray-50 shadow-md relative z-[9999]">
                       <div className="relative inline-block group z-50">
                         {/* Action Button */}
                         <button className="p-2 hover:bg-gray-100 rounded-full">
@@ -547,8 +549,8 @@ const BuyerMeetingPage = () => {
                         {/* Action Menu */}
                         <div
                           className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg
-                    opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                    transition-all duration-200 z-50 me-20"
+    opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+    transition-all duration-200 z-[9999] me-20"
                         >
                           <ActionMenu />
                         </div>
